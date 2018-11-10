@@ -1,0 +1,27 @@
+* {
+    font-family: Helvetica, sans-serif;
+    display: box;
+}
+
+header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+.logo {
+    width: 10em;
+}
+
+.danger, .action {
+    height: 35px;
+    background: violet;
+    border: 1px solid red;
+}
+
+.danger:hover, .action:hover {
+    background: indianred;
+}

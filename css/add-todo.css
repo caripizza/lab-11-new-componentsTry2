@@ -1,0 +1,43 @@
+#add-todo {
+    background-color: lightslategrey;
+    padding: 25px;
+}
+
+h6 {
+    color: magenta;
+}
+
+h3 {
+    color: purple;
+    text-decoration: underline;
+    margin-right: 30px;
+}
+input {
+    height: 2em;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: bolder; 
+    margin: 0 10px 10px 0;
+    align-items: right;
+    margin-left: 1em;
+}
+
+@media screen and (max-width: 605px) {
+    form {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    label {
+        justify-content: space-between;
+        max-width: 90%;
+    }
+}

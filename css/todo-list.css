@@ -1,0 +1,46 @@
+ul#todos {
+    margin: 0 auto;
+}
+
+li.todo {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+input[type="checkbox"] {
+    margin-right: 15px;
+    zoom: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
+/* .todo .task {
+    background-color: orange;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+} */
+
+.todo button {
+    margin-bottom: 5px;
+}
+
+.todo-due {
+    color: red;
+    margin-left: 5px;
+    /* margin-left: 85px; */
+    /* border-right: 100px; */
+}
+
+.todo-done {
+    color: green;
+    margin-left: 55px;
+    /* margin-right: 40px; */
+}
