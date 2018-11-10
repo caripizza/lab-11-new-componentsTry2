@@ -1,6 +1,6 @@
 import html from './html.js';
 
-function makeTodo() {
+function makeTodoForm() {
     return html`
         <form id="add-todo-form">
             <label>
@@ -29,7 +29,7 @@ class AddTodo {
     }
 
     render() {
-        const dom = makeTodo();
+        const dom = makeTodoForm();
         const form = dom.getElementById('add-todo-form');
         form.addEventListener('submit', event => {
             event.preventDefault();
