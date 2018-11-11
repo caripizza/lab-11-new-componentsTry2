@@ -29,14 +29,13 @@ export default class TodoApp {
 
         const header = new Header();
         headerSection.appendChild(header.render());
-        
+
         const addTodo = new AddTodo(todo => {
             todoApi.add(todo);
             todoList.add(todo);
         });
         addTodoSection.appendChild(addTodo.render());
-        
-        
+
         return dom;
     }
 }

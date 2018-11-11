@@ -17,9 +17,6 @@ function makeTodo(todo) {
 }
 
 
-
-
-
 const todoList = {
     init(todos, onRemove) {
         for(let i = 0; i < todos.length; i++) {

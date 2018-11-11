@@ -1,13 +1,13 @@
-import html from './html.js';
+// import html from './html.js';
 
-function todoListSection() {
-    return html`
-    <ul id="todos"></ul>
-    `;
-}
+// function todoListSection() {
+//     return html`
+//     <ul id="todos"></ul>
+//     `;
+// }
 
-export default class TodoListSection {
-    render() {
-        return todoListSection();
-    }
-}
+// export default class TodoListSection {
+//     render() {
+//         return todoListSection();
+//     }
+// }
