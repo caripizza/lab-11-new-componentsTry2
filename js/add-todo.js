@@ -1,5 +1,4 @@
 import html from './html.js';
-// import TodoListSection from './newtodo-list.js';
 
 function makeTodoForm() {
     return html`
@@ -21,7 +20,6 @@ function makeTodoForm() {
             </p>
         </form>
         <hr />
-        <!--<div id="todo-section"></div>-->
     `;
 }
 
@@ -47,9 +45,6 @@ export default class AddTodo {
             form.reset();
             document.activeElement.blur();
         });
-        // const container = dom.querySelector('#todo-section');
-        // const todoSection = new TodoListSection();
-        // container.appendChild(todoSection.render());
 
         return dom;
     }
