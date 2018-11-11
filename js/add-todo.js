@@ -1,4 +1,5 @@
 import html from './html.js';
+import TodoListSection from './newtodo-list.js';
 
 function makeTodoForm() {
     return html`
@@ -20,10 +21,11 @@ function makeTodoForm() {
             </p>
         </form>
         <hr />
+        <div id="todo-section"></div>
     `;
 }
 
-class AddTodo {
+export default class AddTodo {
     constructor(onAdd) {
         this.onAdd = onAdd;
     }
@@ -45,34 +47,10 @@ class AddTodo {
             form.reset();
             document.activeElement.blur();
         });
+        const container = dom.querySelector('#todo-section');
+        const todoSection = new TodoListSection();
+        container.appendChild(todoSection.render());
 
         return dom;
     }
 }
-
-export default AddTodo;
-
-// const addTodo = {
-//     init(onAdd) {
-//         const form = document.getElementById('add-todo-form');
-
-//         form.addEventListener('submit', function(event) {
-//             event.preventDefault();
-//             const elements = form.elements;
-            
-//             const todo = {
-//                 task: elements.task.value,
-//                 due: elements.due.value,
-//                 done: elements.done.checked,
-//             };
-
-//             onAdd(todo); // child is saying hey parent do this
-
-//             form.reset();
-//             document.activeElement.blur();
-//         });
-
-//     }
-// };
-
-// export default addTodo;

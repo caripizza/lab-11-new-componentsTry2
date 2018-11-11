@@ -1,24 +1,24 @@
 import html from './html.js';
 
+
 function makeTodo(todo) {
-    var newTodo = new Date(todo.due);
-    var jsonDate = newTodo.toJSON();
-    var newJsonDate = new Date(jsonDate).toUTCString();
-    var dateString = newJsonDate.split(' ').slice(0, 4).join(' ');
+    const newTodo = new Date(todo.due);
+    const jsonDate = newTodo.toJSON();
+    const newJsonDate = new Date(jsonDate).toUTCString();
+    const dateString = newJsonDate.split(' ').slice(0, 4).join(' ');
 
     return html`
-    <li class="todo">
-    <h3>${todo.task}</h3>
-    ${dateString}
-    <h3 class="todo-due" id="overdue-value">${newTodo.getTime() > new Date() ? '' : 'Overdue'}</h3>
-    <h3 class="todo-done" id="done-value">${todo.done === true ? 'Done!' : ''}</h4>
-    <input type="checkbox" id="checkbox">
-    <button class="danger"> Remove </button>
+    <li class="todo"><h3>${todo.task}</h3>${dateString}
+        <h3 class="todo-due" id="overdue-value">${newTodo.getTime() > new Date() ? '' : 'Overdue'}</h3>
+        <h3 class="todo-done" id="done-value">${todo.done === true ? 'Done!' : ''}</h4>
+            <input type="checkbox" id="checkbox">
+        <button class="danger"> Remove </button>
     </li>`;
 }
 
-// reference the unordered list id from document
-const list = document.getElementById('todos');
+
+
+
 
 const todoList = {
     init(todos, onRemove) {
@@ -40,15 +40,14 @@ const todoList = {
         });
         checkBox.addEventListener('click', function() {
             if(checkBox.checked) {
-                // listItem.classList.add('color-green');
                 doneValue.innerHTML = 'Done!';
                 overdueValue.classList.add('hidden');
             } else {
-                // listItem.classList.remove('color-green');
                 doneValue.innerHTML = '';
                 overdueValue.classList.remove('hidden');
             }
         });
+        const list = document.getElementById('todos');
         list.appendChild(dom);
     }
 };

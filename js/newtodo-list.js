@@ -1,23 +1,13 @@
 import html from './html.js';
 
-function makeTodoList() {
+function todoListSection() {
     return html`
-    <ul id="todos">test</ul>
+    <ul id="todos"></ul>
     `;
 }
 
-class TodoList {
-    constructor(todos, onRemove) {
-        this.todos = todos;
-        this.onRemove = onRemove;
-    }
-
+export default class TodoListSection {
     render() {
-        const dom = makeTodoList();
-        this.list = dom.querySelector('ul');
-        return dom;
+        return todoListSection();
     }
 }
-
-
-export default TodoList;
