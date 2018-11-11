@@ -14,6 +14,11 @@ let todos = [
         task: 'Do laundry',
         due: new Date('11/04/2018'),
         done: false
+    },
+    {
+        task: 'Visit D.C.',
+        due: new Date('12/10/2018'),
+        done: false
     }
 ];
 

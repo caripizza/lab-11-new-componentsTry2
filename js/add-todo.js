@@ -19,7 +19,6 @@ function makeTodoForm() {
                 <button class="action">Add New</button> 
             </p>
         </form>
-        <hr />
     `;
 }
 
